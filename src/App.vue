@@ -1,10 +1,5 @@
 <template>
-  {{ $store.state.num }}
-  {{ $store.getters.NUM }}
+  <router-view></router-view>
 </template>
-
-<script setup lang="ts">
+<script>
 </script>
-
-<style>
-</style>

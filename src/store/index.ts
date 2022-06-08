@@ -1,4 +1,7 @@
-import {createStore} from "vuex"
+import { createStore } from "vuex"
+import cart from './modules/cart'
+import user from './modules/user'
+import createPersistedState from 'vuex-persistedstate'
 
 /*
 * vue2 new Vuex.Store({}) 创建仓库
@@ -6,15 +9,14 @@ import {createStore} from "vuex"
 * */
 
 export default createStore({
-  state: {
-    num: 10
+  modules: {
+    user,
+    cart
   },
-  mutations: {},
-  actions: {},
-  getters: {
-    NUM(state) {
-      return state.num * 10
-    }
-  },
-  modules: {}
+  plugins: [
+    createPersistedState({
+      key: 'rabbit-store',
+      paths: [ 'user', 'cart' ]
+    })
+  ]
 })
