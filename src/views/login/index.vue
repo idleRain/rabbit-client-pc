@@ -1,13 +1,10 @@
 <template>
-  <div>登录</div>
+
 </template>
 
 <script>
-export default {
-  name: 'XtxLoginPage'
-}
-</script>
 
+</script>
 
 <style scoped>
 
